@@ -40,3 +40,17 @@ def calc_cros_entropy(m,p, y):
 	for i in range(m):
 		out += y[i] * np.log(p[i] + epsilon) + (1.0 - y[i]) * np.log(1.0 - p[i] + epsilon)
 	return (-1 /m * out)
+
+
+# initialize a numpy array with random values from -0.05 to 0.05
+def init_weights(size):
+	#return  np.array([random.uniform(-0.05,0.05) for i in range(size)])
+	return  np.array([random.randint(1,10) for i in range(size)])
+
+def read_in_data():
+	df = pd.read_csv("/Users/miguelbarrios/Documents/Machine-Learning/Sports-Activity-Classifier/data/test_set.csv")
+	df = encode_target_to_numeric(df).values
+	X = df[:,0:-1]
+	# we need to modifie targets so we can correctly calculate the cost
+	y = df[:,-1]
+	return X,y
