@@ -22,7 +22,6 @@ def makeFeatureHeader(features, colNames):
 	header.append("activity")
 	return header
 
-
 features = ["mean", "max", "min", "var", "std", "skew"]
 activites = {'a01': 'sitting', 'a02': 'standing', 'a03': 'lyingBack','a04':'lyingRigh','a05':'ascendingStairs','a06':'decendingStairs', 'a07':'standingInElevatorStill','a08':'movingInElevator','a09':'walkingLot','a10':'walkingTreadmillFlat', 'a11':'walkingTreadmillIncline','a12':'runningTreadmill','a13':'stepper', 'a14':'crossTrainer', 'a15':'cyclingHorizontal','a16':'cyclingVertical','a17':'rowing','a18':'jumping','a19':'basketBall'} 
 people = ['p1','p2','p3','p4','p5','p6','p7','p8']
@@ -39,7 +38,6 @@ header = makeFeatureHeader(features, collumNames)
 features_df.append(header)
 for activity in tqdm(activites):
 	for person in tqdm(people):
-		#print(person + " " + activites[activity])
 		segments = os.listdir(mainDir + activity + "/" + person)
 		segments.sort()
 		if ".DS_Store" in segments:

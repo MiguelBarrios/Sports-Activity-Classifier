@@ -135,11 +135,7 @@ class Neural_Net:
         return pred
 
     """ ######################################################################################
-    I was unable to get my backpropagation algorithm working so i implemented it by following a tutorial, and changed my code fit the algorithm
-    The following two methods were taken directly from said repo
-
     https://github.com/musikalkemist/DeepLearningForAudioWithPython/tree/master/8-%20Training%20a%20neural%20network:%20Implementing%20back%20propagation%20from%20scratch/code
- 
     """ ######################################################################################
 
     def gradient_descent(self, learningRate=1):

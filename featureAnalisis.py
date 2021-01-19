@@ -5,8 +5,6 @@ features = df.columns[0:-1]
 target = 'activity'
 pca_df = principal_component_analysis(df = df, features = features,target =  target, n = 30)
 
-
-########## Analisis    ##########
 targets = ['sitting','standing','lyingBack','lyingRigh',
 'ascendingStairs','decendingStairs','standingInElevatorStill','movingInElevator',
 'walkingLot','walkingTreadmillFlat','walkingTreadmillIncline','runningTreadmill',
