@@ -134,10 +134,6 @@ class Neural_Net:
                 pred.append(index % 19)
         return pred
 
-    """ ######################################################################################
-    https://github.com/musikalkemist/DeepLearningForAudioWithPython/tree/master/8-%20Training%20a%20neural%20network:%20Implementing%20back%20propagation%20from%20scratch/code
-    """ ######################################################################################
-
     def gradient_descent(self, learningRate=1):
         """Learns by descending the gradient
         Args:
